@@ -1,0 +1,124 @@
+/* Hero.css */
+
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Dancing+Script:wght@400..700&family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Sirin+Stencil&display=swap');
+
+/* General styles */
+.hero {
+ position: relative;
+  overflow: hidden;
+  background-color: #f4f4f4; /* Light Gray */
+  height: 730px; 
+}
+
+/* Overlay */
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3); /* Semi-transparent black overlay */
+  z-index: 1;
+}
+
+/* Hero images */
+.hero-images {
+  position: relative;
+  height: 410px; /* Adjust height as needed */
+  overflow: hidden;
+}
+
+.hero-images img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 1s ease-in-out; /* Smooth transition effect */
+}
+
+.hero-images img.active {
+  opacity: 1;
+}
+
+/* Hero text */
+.hero-text {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  color: #fff;
+}
+
+.hero-text h1 {
+  font-family: 'Bebas Neue', sans-serif; /* Apply Bebas Neue font to the heading */
+  font-size: 3.5rem;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  color: #333; /* Dark Gray */
+  font-weight: 700; /* Adjust font weight */
+  transition: font-size 0.5s ease-in-out; /* Smooth transition for font size */
+}
+
+.hero-text p {
+  font-family: 'EB Garamond', serif; /* Apply EB Garamond font to the paragraph */
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-bottom: 30px;
+  color: #555; /* Medium Gray */
+  transition: font-size 0.5s ease-in-out; /* Smooth transition for font size */
+}
+
+/* Button */
+.btn {
+  background-color: #007bff; /* Navy Blue */
+  color: #fff;
+  padding: 15px 30px;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.btn:hover {
+  background-color: #0056b3; /* Darker Navy Blue */
+}
+
+.arrow {
+  width: 20px;
+  margin-left: 5px;
+}
+
+/* Navy blue overlay */
+.navy-blue-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  top: 650px;
+  width: 100%;
+  height: 90px; /* Adjust height as needed */
+  background-color: #001f3f; /* Navy Blue */
+  z-index: 1;
+}
+
+/* Media queries */
+@media(max-width: 850px) {
+  .hero-text h1{
+    font-size: 40px;
+  }
+}
+@media(max-width: 650px) {
+  .hero-text h1{
+    font-size: 30px;
+    max-width: 400px;
+    margin: auto;
+  }
+
+  .hero-text p{
+    font-size: 14px;
+    margin: 15px auto 30px;
+  }
+}

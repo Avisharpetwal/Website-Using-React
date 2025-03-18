@@ -1,0 +1,54 @@
+.footer {
+  background-color: #060324;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+  font-size: 14px;
+  width: 100%;
+}
+
+.footer p {
+  margin: 0;
+}
+
+.footer-links {
+  list-style-type: none;
+  padding: 0;
+  margin-top: 10px;
+  text-align: center; /* Center the links on smaller screens */
+}
+
+.footer-links li {
+  display: inline-block; /* Display links in a row */
+  margin-right: 10px;
+}
+
+.footer-links li:last-child {
+  margin-right: 0;
+}
+
+.footer-links li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer-links li a:hover {
+  text-decoration: underline;
+}
+
+/* Media Query for smaller screens */
+@media (max-width: 768px) {
+  .footer {
+      font-size: 12px; /* Decrease font size for better readability on smaller screens */
+  }
+
+  .footer-links {
+      margin-top: 20px; /* Increase margin for better spacing */
+  }
+
+  .footer-links li {
+      display: block; /* Display links vertically for better spacing on smaller screens */
+      margin-right: 0;
+      margin-bottom: 10px; /* Add bottom margin between links */
+  }
+}

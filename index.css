@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Outfit", sans-serif;
+}
+body, html {
+    margin: 0;
+    padding: 0;
+  }
+  
+a{
+    text-decoration: none;
+    color: inherit;
+    line-height: 1;
+    cursor: pointer;
+}
+.btn {
+    padding: 14px 25px;
+    font-size: 16px;
+    border-radius: 20px;
+    cursor: pointer;
+    border: 0;
+    outline: 0;
+    background-color: #ffffff; /* Initial background color */
+    color: #333; /* Initial text color */
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition */
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn:hover {
+    background-color: transparent; /* Transparent background on hover */
+    color: #ffffff; /* Text color on hover */
+}
+
+.btn img {
+    width: 20px;
+    margin: 10px;
+}
+
+.btn.dark-btn {
+    background: #212EA0;
+    color: #fff;
+}
+
+.btn.dark-btn:hover {
+    background-color: rgba(255, 255, 255, 0.3); /* Transparent white */
+    color: #000; /* Text color on hover */
+}
+
+.navbtn {
+    color: #fff; /* Navy Blue text color */
+    padding: 10px 10px;
+    font-size: 1.2rem;
+    border: 2px solid transparent; /* Transparent border */
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+.navbtn:hover {
+    background-color: rgba(206, 218, 232, 0.1); /* Transparent Navy Blue with opacity */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+    transform: scale(1.10);
+}
+
+.navbtn:active {
+    background-color: rgba(12, 27, 58, 0.2); /* Lighter transparent Navy Blue when clicked */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+
+/* media query */
+
+@media (max-width: 1200px){
+    .container{
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+    .btn{
+        padding: 14px 22px;
+    }
+}

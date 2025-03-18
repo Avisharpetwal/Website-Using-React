@@ -1,0 +1,99 @@
+/* Programs.css */
+
+.programs {
+    margin: 80px auto;
+    width: 90%;
+    max-width: 1200px; /* Set maximum width to prevent overly wide layout */
+    display: flex;
+    flex-wrap: wrap; /* Allow items to wrap to the next line */
+    justify-content: space-between;
+}
+
+.program {
+    position: relative;
+    width: calc(30% - 20px); /* Adjust width to fit three items per row with margin */
+    margin-bottom: 40px; /* Add some bottom margin between items */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Add transition for box shadow */
+    overflow: hidden; /* Hide overflow to prevent caption overflow */
+}
+
+.program:hover {
+    transform: translateY(-5px); /* Move the program item up slightly on hover */
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.1); /* Increase box shadow on hover */
+}
+
+.program img {
+    width: 100%;
+    display: block;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out; /* Add a smooth transition effect */
+}
+
+.program img:hover {
+    transform: scale(1.05); /* Scale up the image on hover */
+}
+
+.caption {
+    border-radius: 10px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0) 100%); /* Gradient overlay */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: #fff;
+    cursor: pointer;
+    opacity: 0; /* Hide caption by default */
+    transition: opacity 0.3s ease-in-out; /* Add a smooth transition effect */
+}
+
+.program:hover .caption {
+    opacity: 1; /* Show caption on hover */
+}
+
+.caption p {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 5px 0;
+    animation: fadeIn 0.5s ease; /* Add a fade-in animation to the text */
+}
+
+.caption img {
+    width: 60px;
+    margin-bottom: 10px;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Media queries */
+@media(max-width: 1200px){
+    .program {
+        width: calc(33.33% - 20px); /* Adjust width for four items per row */
+    }
+}
+
+@media(max-width: 992px){
+    .program {
+        width: calc(50% - 20px); /* Adjust width for two items per row */
+    }
+}
+
+@media(max-width: 600px){
+    .program {
+        width: calc(100% - 40px); /* Adjust width for one item per row */
+    }
+}
